@@ -14,9 +14,11 @@ alias py3='python3'
 # load bash
 alias loadBash='source ~/.bashrc'
 
+# xclip
+alias xclipf='xclip -sel clip < '
+alias copy='xclip -sel clip'
+
 # aliases reminders!!!
 alias help='help && echo alias to list custom defined aliases && echo use aliasFN to list custom defined functions'
 
 alias aliasGit="alias | grep -v grep | grep \'git --color=never && aliasFNGit"
-
-
