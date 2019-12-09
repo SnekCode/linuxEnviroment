@@ -5,7 +5,7 @@ alias ga.='git add .'
 # use gcm followed by the commit message with out quotes 
 # to quickly commit messages
 function gcm() {
-git commit -m "$@"
+git commit -m "$*"
 }
 
 # use gcam to git add all files then commit with message
