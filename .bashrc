@@ -96,8 +96,8 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
-if [ -f ~/Environment/.bash_aliases ]; then
-    . ~/Environment/.bash_aliases
+if [ -f ~/linuxEnvironment/.bash_aliases ]; then
+    . ~/linuxEnvironment/.bash_aliases
 fi
 
 # enable programmable completion features (you don't need to enable
@@ -114,13 +114,13 @@ fi
 #
 #Import .bash_functions
 #
-if [ -f ~/Environment/.bash_functions ]; then
-    . ~/Environment/.bash_functions
+if [ -f ~/linuxEnvironment/.bash_functions ]; then
+    . ~/linuxEnvironment/.bash_functions
 fi
 
 #
 #Import git aliases and git bash functions
 #
-if [ -f ~/Environment/.bash_git ]; then
-    . ~/Environment/.bash_git
+if [ -f ~/linuxEnvironment/.bash_git ]; then
+    . ~/linuxEnvironment/.bash_git
 fi
