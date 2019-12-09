@@ -9,8 +9,3 @@ alias py3='python3'
 
 # load bash
 alias loadBash='source ~/.bashrc'
-
-#git Aliases
-alias gst='git status'
-alias ga.='git add .'
-#alias gcm='git commit -m ""

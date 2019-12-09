@@ -112,8 +112,15 @@ if ! shopt -oq posix; then
 fi
 
 #
-#
+#Import .bash_functions
 #
 if [ -f ~/Environment/.bash_functions ]; then
     . ~/Environment/.bash_functions
+fi
+
+#
+#Import git aliases and git bash functions
+#
+if [ -f ~/Environment/.bash_git ]; then
+    . ~/Environment/.bash_git
 fi
