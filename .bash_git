@@ -10,5 +10,5 @@ git commit -m "$@"
 
 # use gcam to git add all files then commit with message
 function gcam() {
-ga. && git commit -m "$*" && echo Commit made with message:  ""$*""
+ga. && git commit -m "$*" && echo Commit made with message:  "$*"
 }
