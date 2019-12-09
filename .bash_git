@@ -1,6 +1,7 @@
 #git Aliases
 alias gst='git status'
 alias ga.='git add .'
+alias gp='git push'
 
 # use gcm followed by the commit message with out quotes 
 # to quickly commit messages
@@ -18,4 +19,4 @@ ga. && git commit -m "$*" && echo Commit made with message:  "$*"
 #
 # Add functions above to this echo
 #
-alias aliasFNGit='echo $gcamDes && echo $gcmDes'
+alias aliasFNGit='echo Functions: && echo $gcamDes && echo $gcmDes'
