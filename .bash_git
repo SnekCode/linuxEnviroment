@@ -4,11 +4,18 @@ alias ga.='git add .'
 
 # use gcm followed by the commit message with out quotes 
 # to quickly commit messages
+gcmDes="gcm  = git commit -m followed by the message provided"
 function gcm() {
 git commit -m "$*"
 }
 
-# use gcam to git add all files then commit with message
+gcamDes="gcam = git add all files then commit with message"
 function gcam() {
 ga. && git commit -m "$*" && echo Commit made with message:  "$*"
 }
+
+
+#
+# Add functions above to this echo
+#
+alias aliasFNGit='echo $gcamDes && echo $gcmDes'
