@@ -2,7 +2,7 @@
 alias gst='git status'
 alias ga.='git add .'
 alias gp='git push'
-alias gcm ='git checkout master && git pull'
+alias gcm='git checkout master && git pull'
 
 gcamDes="gcam = git add all files then commit with message"
 function gcam() {
@@ -13,4 +13,4 @@ ga. && git commit -m "$*" && echo Commit made with message:  "$*"
 #
 # Add functions above to this echo
 #
-alias aliasFNGit='echo Functions: && echo $gcamDes && echo $gcmDes'
+alias aliasFNGit='echo Functions: && echo $gcamDes'
