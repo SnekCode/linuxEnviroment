@@ -2,13 +2,7 @@
 alias gst='git status'
 alias ga.='git add .'
 alias gp='git push'
-
-# use gcm followed by the commit message with out quotes 
-# to quickly commit messages
-gcmDes="gcm  = git commit -m followed by the message provided"
-function gcm() {
-git commit -m "$*"
-}
+alias gcm ='git checkout master && git pull'
 
 gcamDes="gcam = git add all files then commit with message"
 function gcam() {
