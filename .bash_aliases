@@ -23,6 +23,8 @@ alias papi='cd ~/Projects/Puckboard/puckboard-api && echo you are now at: && pwd
 
 alias pui='cd ~/Projects/Puckboard/puckboard-ui && echo you are now at: && pwd'
 
+# Game Servers
+alias startAvorion='~/AvorionServer/server.sh --galaxy-name All\ the\ Crews --admin 76561198006722488 --datapath ~/.avorion/galaxies/'
 
 
 # aliases reminders!!!
