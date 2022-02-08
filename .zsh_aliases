@@ -8,3 +8,7 @@ alias reloadsh='source ~/.zshrc'
 # xclip
 alias xclipf='xclip -sel clip < '
 alias copy='xclip -sel clip'
+
+#Android Studio
+alias studio='sh /usr/bin/android-studio/bin/studio.sh'
+
