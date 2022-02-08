@@ -1,4 +1,5 @@
 sh ./copy.sh
+sh ./git.sh
 
 sudo apt update
 sudo apt install -y zsh
