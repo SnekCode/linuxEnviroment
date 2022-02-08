@@ -10,5 +10,5 @@ alias xclipf='xclip -sel clip < '
 alias copy='xclip -sel clip'
 
 #Android Studio
-alias studio='sh /usr/bin/android-studio/bin/studio.sh'
+alias studio='nohup sh /usr/bin/android-studio/bin/studio.sh &'
 
