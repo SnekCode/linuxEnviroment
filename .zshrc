@@ -1,9 +1,16 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+
+
+
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+
+# export
+export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -71,11 +78,11 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
-
+plugins+=(zsh-vi-mode)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-
+source ~/.zsh_aliases
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -100,6 +107,15 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+autoload -Uz compinit
+zstyle ':completion:*' menu select
+fpath+=~/.zfunc
 
-# source aliases
-source ~/.zsh_aliases
+[[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
+
+alias readme='curl -O https://repo1.dso.mil/platform-one/big-bang/apps/library-charts/gluon/-/raw/master/docs/README.md.gotmpl && curl -O https://repo1.dso.mil/platform-one/big-bang/apps/library-charts/gluon/-/raw/master/docs/.helmdocsignore && docker run --rm -v "`pwd`:/helm-docs" -u $(id -u) jnorwood/helm-docs:v1.5.0 -s file -t /helm-docs/README.md.gotmpl --dry-run > README.md && rm README.md.gotmpl .helmdocsignore'
+
+# escape timeout
+KEYTIMEOUT=1
+#ZVM_LINE_INIT_MODE=$ZVM_MODE_NORMAL
+ZVM_VI_SURROUND_BINDKEY=s-prefix
