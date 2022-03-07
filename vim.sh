@@ -1,3 +1,7 @@
+# install vundle
+
+git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
+
 echo "Opening vim.  Please Run :PluginInstall.  [PRESS ANY KEY TO CONTINUE]"
 read abc
 vim

@@ -25,7 +25,7 @@ set timeoutlen=1000 ttimeoutlen=0
 " settings for code
 syntax on
 set showmatch
-colorscheme ron 
+colorscheme onedark 
 set number
 set showcmd
 set ruler
@@ -39,9 +39,18 @@ autocmd BufEnter *.png,*.jpg,*gif exec "! ~/.iterm2/imgcat ".expand("%") | :bw
 
 
 " cursor display iterm2 and tmux
-let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
-let &t_SR = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=2\x7\<Esc>\\"
-let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+" let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+" let &t_SR = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=2\x7\<Esc>\\"
+" let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+
+
+if exists('$TMUX')
+      let &t_SI = "\<Esc>Ptmux;\<Esc>\e[5 q\<Esc>\\"
+      let &t_EI = "\<Esc>Ptmux;\<Esc>\e[2 q\<Esc>\\"
+  else
+      let &t_SI = "\e[5 q"
+      let &t_EI = "\e[2 q"
+  endif
 
 " undo
 nnoremap <F5> :UndotreeToggle<CR>
