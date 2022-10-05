@@ -3,7 +3,7 @@
 
 echo "###### INSTALLING GIT ######"
 
-sudo apt-get update && sudo apt-get -y install git
+sudo apt-get -y -qq update && sudo apt-get -y -qq install git
 # set up credentials
 
 echo "###### SETTING CREDENTIAL TO CACHE ######"

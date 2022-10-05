@@ -25,7 +25,6 @@ set timeoutlen=1000 ttimeoutlen=0
 " settings for code
 syntax on
 set showmatch
-colorscheme onedark 
 set number
 set showcmd
 set ruler
@@ -108,8 +107,11 @@ Plugin 'mbbill/undotree'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'preservim/nerdtree'
 Plugin 'ycm-core/YouCompleteMe'
+Plugin 'joshdick/onedark.vim'
 call vundle#end()
 filetype plugin indent on
+
+colorscheme onedark 
 
 function Run(...)
     " Map each type of file to the command used to
